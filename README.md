@@ -1,5 +1,5 @@
 # coomwaymp3
-A node module that is designed to make your life easier when dealing with errors, logging, and more!
+An NPM module designed to return mp3 files / songs created by MasterCoomway.
 
 ---
 
@@ -19,7 +19,7 @@ A node module that is designed to make your life easier when dealing with errors
 
 ## Class Builder
 
-A way that you can log errors and useful information via console.
+The global settings for the coomwaymp3 npm module.
 
 | Entry        | Type | Definition | 
 |----------------|---------------|---------------|
@@ -29,7 +29,7 @@ A way that you can log errors and useful information via console.
 
 ## The Official Index
 
-An easier way to use the Figlify module.
+A list of all songs with the position in the array.
 
 | Position        | Song Name | 
 |----------------|---------------|
@@ -116,7 +116,7 @@ client.on('ready', async () => {
 client.on('message', async message => {
 
     let deChannel = await client.channels.cache.get('some-channel-id') // Get a voice channel to join and play audio
-    let pick = await coomway.search(1) // Gets position 1 in the array of songs (second listed in array)
+    let pick = await coomway.search(27) // Gets position 1 in the array of songs (second listed in array)
 
     if(message.content.startsWith(`h!test`)) {
         await deChannel.join().then(async connection => {
@@ -145,4 +145,4 @@ client.login('YOUR_BOT_TOKEN')
 
 ---
 
-`LAST UPDATE: 07/23/2021`
+`LAST UPDATE: 07/24/2021`
