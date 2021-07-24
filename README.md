@@ -46,56 +46,57 @@ An easier way to use the Figlify module.
 | 10   | CostiDiss2
 | 11   | coucilunfinished
 | 12   | cringstom
-| 13   | Disabled
-| 14   | Distorted_Diss
-| 15   | dont doubt me
-| 16   | enjoyyourstay
-| 17   | ESHY_DISSTRACK
-| 18   | secret
-| 19   | fcuk_you_jarad
-| 20   | get_out_of_my_head
-| 21   | gigasampl
-| 22   | GOD_FEARING
-| 23   | gta_5_sevraaaaa
-| 24   | gypsy
-| 25   | heard_of_me_sample
-| 26   | HURACAN DISS
-| 27   | hyperz apology
-| 28   | hyperz diss 2
-| 29   | hyperz diss 3
-| 30   | hyperz diss 4
-| 31   | I_dont_really_care_for_you
-| 32   | I_rape_kisd
-| 33   | jackspedicey
-| 34   | Lil_Huddy_Star
-| 35   | markiplier
-| 36   | message_to_my_haters
-| 37   | Mommys phone officall music videp
-| 38   | Mommys Phone REMASTERED
-| 39   | Mommys Phone REMIX
-| 40   | My_family_is_dead
-| 41   | OLD_TOWN_ROAD_COVER
-| 42   | Omegle
-| 43   | raditz_diss
-| 44   | raditz_diss_2
-| 45   | Raditz_diss2a
-| 46   | ramma
-| 47   | randy_diss
-| 48   | ransom
-| 49   | RANYISOVERPARTY
-| 50   | robots
-| 51   | save_you
-| 52   | Schizo
-| 53   | simp_diss
-| 54   | Simp_Diss_serious
-| 55   | skidmeisterdiss
-| 56   | soccer vent
-| 57   | stupid_fucking_song
-| 58   | the_great_depression
-| 59   | Ultimate_diss_full
-| 60   | V-Bucks
-| 61   | Why_is_my_dick_so_large
-| 62   | YSA Diss Track
+| 13   | cyanide_pill
+| 14   | Disabled
+| 15   | Distorted_Diss
+| 16   | dont doubt me
+| 17   | enjoyyourstay
+| 18   | ESHY_DISSTRACK
+| 19   | secret
+| 20   | fcuk_you_jarad
+| 21   | get_out_of_my_head
+| 22   | gigasampl
+| 23   | GOD_FEARING
+| 24   | gta_5_sevraaaaa
+| 25   | gypsy
+| 26   | heard_of_me_sample
+| 27   | HURACAN DISS
+| 28   | hyperz apology
+| 29   | hyperz diss 2
+| 30   | hyperz diss 3
+| 31   | hyperz diss 4
+| 32   | I_dont_really_care_for_you
+| 33   | I_rape_kisd
+| 34   | jackspedicey
+| 35   | Lil_Huddy_Star
+| 36   | markiplier
+| 37   | message_to_my_haters
+| 38   | Mommys phone officall music videp
+| 39   | Mommys Phone REMASTERED
+| 40   | Mommys Phone REMIX
+| 41   | My_family_is_dead
+| 42   | OLD_TOWN_ROAD_COVER
+| 43   | Omegle
+| 44   | raditz_diss
+| 45   | raditz_diss_2
+| 46   | Raditz_diss2a
+| 47   | ramma
+| 48   | randy_diss
+| 49   | ransom
+| 50   | RANYISOVERPARTY
+| 51   | robots
+| 52   | save_you
+| 53   | Schizo
+| 54   | simp_diss
+| 55   | Simp_Diss_serious
+| 56   | skidmeisterdiss
+| 57   | soccer vent
+| 58   | stupid_fucking_song
+| 59   | the_great_depression
+| 60   | Ultimate_diss_full
+| 61   | V-Bucks
+| 62   | Why_is_my_dick_so_large
+| 63   | YSA Diss Track
 
 ---
 
