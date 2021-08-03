@@ -43,6 +43,6 @@ module.exports = {
         .setTimestamp()
         .setFooter(`${config.main_config.copyright}`)
         
-        message.channel.send(embed).then(msg => msg.delete({ timeout: 12000 })).catch(e => {if(config["main_config"].debugmode) return console.log(e);});
+        message.channel.send(embed).catch(e => {if(config["main_config"].debugmode) return console.log(e);});
     },
 }
