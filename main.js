@@ -9,3 +9,4 @@ class coomway {
         return s ? (this.useDebugMode && console.log(chalk.blue(`\nDEBUG MODE: ${s}\n`)), `https://cdn.hyperz.dev/coomwaymp3/${s}`) : console.log(chalk.red("\n\nThe integer provided in your search function is invalid - coomwaymp3\n\n"));
     }
 }
+module.exports = coomway;
