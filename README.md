@@ -107,7 +107,6 @@ const coomwaymp3 = require('coomwaymp3')
 const coomway = new coomwaymp3(true) // Sets debug mode to true
 const Discord = require('discord.js')
 const client = new Discord.Client()
-const fs = require('fs');
 
 client.on('ready', async () => {
     console.log(`I am ready.`)
