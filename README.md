@@ -48,57 +48,59 @@ A list of all songs with the position in the array.
 | 12   | cringstom
 | 13   | cyanide_pill
 | 14   | Disabled
-| 15   | Distorted_Diss
-| 16   | dont doubt me
-| 17   | enjoyyourstay
-| 18   | ESHY_DISSTRACK
-| 19   | faxes_diss
-| 20   | fcuk_you_jarad
-| 21   | get_out_of_my_head
-| 22   | gigasampl
-| 23   | GOD_FEARING
-| 24   | gta_5_sevraaaaa
-| 25   | gypsy
-| 26   | heard_of_me_sample
-| 27   | HURACAN DISS
-| 28   | hyperz apology
-| 29   | hyperz diss 2
-| 30   | hyperz diss 3
-| 31   | hyperz diss 4
-| 32   | I_dont_really_care_for_you
-| 33   | I_rape_kisd
-| 34   | jackspedicey
-| 35   | LET_ME_IN_THE_SERVER
-| 36   | Lil_Huddy_Star
-| 37   | markiplier
-| 38   | message_to_my_haters
-| 39   | Mommys phone officall music videp
-| 40   | Mommys Phone REMASTERED
-| 41   | Mommys Phone REMIX
-| 42   | My_family_is_dead
-| 43   | OLD_TOWN_ROAD_COVER
-| 44   | Omegle
-| 45   | raditz_diss
-| 46   | raditz_diss_2
-| 47   | Raditz_diss2a
-| 48   | ramma
-| 49   | randy_diss
-| 50   | ransom
-| 51   | RANYISOVERPARTY
-| 52   | robots
-| 53   | save_you
-| 54   | Schizo
-| 55   | simp_diss
-| 56   | Simp_Diss_serious
-| 57   | skidmeisterdiss
-| 58   | soccer vent
-| 59   | stupid_fucking_song
-| 60   | the_great_depression
-| 61   | timmycas_diss
-| 62   | Ultimate_diss_full
-| 63   | V-Bucks
-| 64   | Why_is_my_dick_so_large
-| 65   | YSA Diss Track
+| 15   | Diss God Diss Track
+| 16   | Distorted_Diss
+| 17   | dont doubt me
+| 18   | enjoyyourstay
+| 19   | ESHY_DISSTRACK
+| 20   | faxes_diss
+| 21   | fcuk_you_jarad
+| 22   | fuck_you_soup
+| 23   | get_out_of_my_head
+| 24   | gigasampl
+| 25   | GOD_FEARING
+| 26   | gta_5_sevraaaaa
+| 27   | gypsy
+| 28   | heard_of_me_sample
+| 29   | HURACAN DISS
+| 30   | hyperz apology
+| 31   | hyperz diss 2
+| 32   | hyperz diss 3
+| 33   | hyperz diss 4
+| 34   | I_dont_really_care_for_you
+| 35   | I_rape_kisd
+| 36   | jackspedicey
+| 37   | LET_ME_IN_THE_SERVER
+| 38   | Lil_Huddy_Star
+| 39   | markiplier
+| 40   | message_to_my_haters
+| 41   | Mommys phone officall music videp
+| 42   | Mommys Phone REMASTERED
+| 43   | Mommys Phone REMIX
+| 44   | My_family_is_dead
+| 45   | OLD_TOWN_ROAD_COVER
+| 46   | Omegle
+| 47   | raditz_diss
+| 48   | raditz_diss_2
+| 49   | Raditz_diss2a
+| 50   | ramma
+| 51   | randy_diss
+| 52   | ransom
+| 53   | RANYISOVERPARTY
+| 54   | robots
+| 55   | save_you
+| 56   | Schizo
+| 57   | simp_diss
+| 58   | Simp_Diss_serious
+| 59   | skidmeisterdiss
+| 60   | soccer vent
+| 61   | stupid_fucking_song
+| 62   | the_great_depression
+| 63   | timmycas_diss
+| 64   | Ultimate_diss_full
+| 65   | V-Bucks
+| 66   | Why_is_my_dick_so_large
+| 67   | YSA Diss Track
 
 ---
 
@@ -146,4 +148,4 @@ client.login('YOUR_BOT_TOKEN')
 
 ---
 
-`LAST UPDATE: 07/24/2021`
+`LAST UPDATE: 08/13/2021`
