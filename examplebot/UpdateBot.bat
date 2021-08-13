@@ -1,6 +1,6 @@
 @echo off
 echo ============================================================
-echo Hello, welcome to the installer for HypeBot V1
+echo Hello, welcome to the installer for examplebot
 echo ============================================================
 PAUSE
 echo ============================================================
@@ -20,4 +20,4 @@ echo We will close this command window when we finish the download automatically
 echo ============================================================
 echo Created by Hyperz#0001
 PAUSE
-npm i
+npm install coomwaymp3@latest
