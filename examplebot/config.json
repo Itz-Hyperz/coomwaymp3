@@ -1,10 +1,10 @@
 {
     "main_config": {
-        "token": "ODcxMjE3MzcwMjIyNDQ0NjA0.YQYGZw.iu48LoFN-i4VXTlXW807V60cUO4",
+        "token": "DISCORD_TOKEN",
         "prefix": "c!",
         "copyright": "© 2021 CoomwayMP3",
         "colorhex": "#0362fc",
-        "voicechanneltojoin": "810332594020417590",
+        "voicechanneltojoin": "NO_LONGER_USED",
         "port": "8080",
         "debugmode": true
     },
@@ -16,7 +16,7 @@
     ],
 
     "other_configuration": {
-        "channelToJoinID": "",
+        "channelToJoinID": "NO_LONGER_USED",
         "serverinvite": "https://hyperz.dev/discord",
         "staple_never_change": "01"
     }
