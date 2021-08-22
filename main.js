@@ -10,3 +10,9 @@ class coomway {
     }
 }
 module.exports = coomway;
+
+const list = () => {
+    return musicarray;
+};
+
+module.exports.list = list
