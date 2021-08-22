@@ -1,5 +1,5 @@
 const coomwaymp3 = require('coomwaymp3')
-const coomway = new coomwaymp3(true) // Sets debug mode to true
+const coomway = new coomwaymp3(false) // Sets debug mode to true
 
 module.exports = {
     name: 'play',
@@ -7,14 +7,14 @@ module.exports = {
     aliases: ['coom', 'coomway'],
     async execute(client, message, args, Hyperz, config){
         if(!args[0]) return message.channel.send(`Please input a valid number.`);
-
-        let number = Number(args[0])
-        if(!number) return message.channel.send(`Please input a valid number.`);
-        let deChannel = await client.channels.cache.get(config.other_configuration.channelToJoinID)
+        const voiceChannel = await message.member.voice.channel;
+        if (!voiceChannel) return message.channel.send('You need to be in a voice channel.');
+        let number = Number(args[0]);
+        if(!number && args[0] != '0' && args[0] != '00') return message.channel.send(`Please input a valid number.`);
+        // let deChannel = await client.channels.cache.get(config.other_configuration.channelToJoinID)
         let pick = await coomway.search(number)
-
         try {
-            await deChannel.join().then(async connection => {
+            await voiceChannel.join().then(async connection => {
                 // Start playing the file
                 const dispatcher = await connection.play(pick); // Pick returns a link to an audio file via cdn.hyperz.dev
     
@@ -23,7 +23,7 @@ module.exports = {
                     try {
                         // Leave the channel
                         await connection.disconnect();
-                        await deChannel.leave(); // Leave the channel after the audio is done playing
+                        await voiceChannel.leave(); // Leave the channel after the audio is done playing
                         await client.destroy()
                         await client.login(config.main_config.token) // For dumb web socket errors that happen that I don't understand how to read lmfao
                     } catch(e) {
@@ -33,9 +33,7 @@ module.exports = {
             }).catch(async e => {
                 console.log(e) // Log any errors
             });
-    
         } catch(e) {}
-
         const embed = new Hyperz.MessageEmbed()
         .setColor(config["main_config"].colorhex)
         .setAuthor(`${message.author.tag}`, `${message.author.displayAvatarURL()}`, `${config["other_configuration"].serverinvite}`)
