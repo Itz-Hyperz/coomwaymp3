@@ -7,7 +7,7 @@ An NPM module designed to return mp3 files / songs created by MasterCoomway.
 
 * [Discord](https://hyperz.dev/discord)
 
-* [Website](https://support.hyperz.dev/)
+* [Website](https://botguys.net/bot/coomway)
 
 ---
 
@@ -148,4 +148,4 @@ client.login('YOUR_BOT_TOKEN')
 
 ---
 
-`LAST UPDATE: 08/13/2021`
+`LAST UPDATE: 08/22/2021`
