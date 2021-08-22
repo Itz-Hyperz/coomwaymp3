@@ -26,7 +26,7 @@ module.exports = {
         .setColor(`${config["main_config"].colorhex}`)
         .setAuthor(`${message.author.tag}`, `${message.author.displayAvatarURL()}`, `${config["other_configuration"].serverinvite}`)
         .setThumbnail(`${client.user.displayAvatarURL()}`)
-        .setDescription("`play` - Play a number from coomwaymp3.\n`creator` - Learn who made the bot.\n`help` - Get a list of everything you need to know.\n`ping` - Check to see if the bot is online.\n`invite` - Get an invite to the server.\n`version` - Learn what the current version of the bot is.")
+        .setDescription("`play` - Play a number from coomwaymp3.\n`creator` - Learn who made the bot.\n`help` - Get a list of everything you need to know.\n`ping` - Check to see if the bot is online.\n`invite` - Get an invite to the server.\n`list` - List all the songs by number.")
         .setTimestamp()
 
         const page3 = new Hyperz.MessageEmbed()
@@ -35,7 +35,7 @@ module.exports = {
         .setAuthor(`${message.author.tag}`, `${message.author.displayAvatarURL()}`, 'https://hyperz.dev/')
         .setThumbnail(`${client.user.displayAvatarURL()}`)
         .addFields(
-            {name: `Programming:`, value: "`Hyperz#0001` - Head Developer of the HypeBot Project."},
+            {name: `Programming:`, value: "`Hyperz#0001` - Head Developer of the HypeBot Project.\n`FAXES#8655` Second in command developer of the *CoomwayMP3.mp3* Project. Also the creator of the list command and other edits becuase Hyperz was \"too lazy when he made this\""},
         )
         .setTimestamp()
 

@@ -6,7 +6,7 @@ module.exports = {
         const pingEmbed = new Hyperz.MessageEmbed()
         .setColor(config["main_config"].colorhex)
         .setAuthor(`${message.author.tag}`, `${message.author.displayAvatarURL()}`, `${config["other_configuration"].serverinvite}`)
-        .setDescription(`**Created By:** [Hyperz#0001](https://hyperz.dev/)`)
+        .setDescription(`**Created By:** [Hyperz#0001](https://hyperz.dev/)\n*List command and other improvements made by the :crown: FAXES!*`)
         .setTimestamp()
         .setFooter(`${config["main_config"].copyright}`)
         
