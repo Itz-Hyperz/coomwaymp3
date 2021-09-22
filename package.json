@@ -1,6 +1,6 @@
 {
   "name": "coomwaymp3",
-  "version": "2.0.9",
+  "version": "2.1.0",
   "description": "An NPM module designed to return mp3 files / songs created by MasterCoomway.",
   "main": "main.js",
   "directories": {
