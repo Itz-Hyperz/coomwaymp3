@@ -6,7 +6,7 @@ class coomway {
     }
     async search(m) {
         let s = musicarray[m];
-        return s ? (this.useDebugMode && console.log(chalk.blue(`\nDEBUG MODE: ${s}\n`)), `https://cdn.hyperz.dev/coomwaymp3/${s}`) : console.log(chalk.red("\n\nThe integer provided in your search function is invalid - coomwaymp3\n\n"));
+        return s ? (this.useDebugMode && console.log(chalk.blue(`\nDEBUG MODE: ${s}\n`)), `https://cdn.hyperz.net/coomwaymp3/${s}`) : console.log(chalk.red("\n\nThe integer provided in your search function is invalid - coomwaymp3\n\n"));
     }
 }
 module.exports = coomway;
