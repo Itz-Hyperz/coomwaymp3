@@ -1,0 +1,48 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CoomwayMP3 - Home</title>
+        <meta property="og:title" content="CoomwayMP3 - Home" />
+        <link rel="icon" href="/assets/logo.png">
+        <meta property="og:image" content="/assets/logo.png">
+        <meta name="theme-color" content="#5865F2">
+        <meta name="description" content="The website and main landing page for the CoomwayMP3 node module!" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="The website and main landing page for the CoomwayMP3 node module!" />
+    </head>
+    <body>
+        <%- include('_header') %>
+        <div class="container maincontainer bg-secondary p-4 mb-5">
+            <h1 class="mb-3">CoomwayMP3</h1>
+            <p>CoomwayMP3 was created by <a class="footeratag" href="https://bosssoftware.net" target="_blank">Hyperz#0001</a> to help promote Coomway's musical craft. The project aims to make the distribution of Coomway's Music much easier and more API focused for other projects. CoomwayMP3 allows you to source any of Coomways music and play it directly through a file link!</p>
+            <hr>
+            <h2 class="mb-3"><%= songs.length.toLocaleString() %> Stored Music Files</h2>
+            <p class="mb-3">This is where you can view all of Coomway's stored music!</p>
+            <form class="mb-3" action="/backend/searchsong" method="post">
+                <div class="row w-75 justify-content-center mx-auto">
+                    <div class="col-lg-6">
+                        <input class="form-control mt-3 me-2 w-100" name="query" type="search" placeholder="Search song..." aria-label="Search" required>
+                    </div>
+                    <div class="col-lg-6">
+                        <button class="btn btn-warning mt-3 w-100" type="submit">Search Song</button>
+                    </div>
+                </div>
+            </form>
+            <div class="row justify-content-center">
+                <% songs.sort((a, b) => { return a.name.localeCompare(b.name); }).forEach(function(item) { %>
+                    <div class="col-lg-3 mb-3">
+                        <div class="p-3">
+                            <h5 class="text-warning"><%= item.name %></h5>
+                            <audio class="audiomain" controls>
+                                <source src="<%= item.url %>" type="audio/<%= item.name.split('.').reverse()[0] %>">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+        <%- include('_footer') %>
+    </body>
+</html>
