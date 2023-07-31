@@ -5,9 +5,9 @@ An NPM module / website designed to return mp3 files / songs created by MasterCo
 
 ## Support
 
-* [Discord](https://astrolabs.net/discord)
+* [Discord](https://hyperz.world/discord)
 
-* [Website](https://coomway.astrolabs.net)
+* [Website](https://coomway.hyperz.world)
 
 ---
 
