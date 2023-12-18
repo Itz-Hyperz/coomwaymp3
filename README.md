@@ -60,4 +60,4 @@ client.login('YOUR_BOT_TOKEN')
 
 ---
 
-`LAST UPDATE: 03/16/2023`
+`LAST UPDATE: 12/18/2023`
