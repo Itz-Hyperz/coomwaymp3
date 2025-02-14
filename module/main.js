@@ -1,58 +1,70 @@
 // Imports
 const axios = require('axios');
 const chalk = require("chalk");
-
-// Configuration
-let config = {
-    "repoUrl": "https://api.github.com/repos/itz-hyperz/coomwaymp3/contents/assets" // 60 requests an hour to Github API
-};
-
 let cache = []; // Cached songs can be pulled from here.
-updateCache(true);
-setInterval(function() {
-    updateCache(true);
-}, 300000); // Every 5 minutes, update cache
 
-// Live Functions
+class CoomClient {
+    constructor(options) {
+        this.debugMode = options.debugMode || true; // default debugMode is set to true
+        this.vileMode = options.vileMode || false; // Trust me... you probably want this set to false...
+        this.repoUrl = options.repoUrl || "https://api.github.com/repos/itz-hyperz/coomwaymp3/contents/assets"; // by default dont change this.
+    }
 
-async function updateCache(debugMode) {
-    let songs = [];
-    try {
-        let request = await axios.get(config.repoUrl);
-        for(let item of request?.data) {
-            songs.push({
-                "name": item.name.toLowerCase().replaceAll(' ', '_'),
-                "url": item.html_url + '?raw=true'
-            });
+    init() { // Run this function to begin.
+        updateCache(this.debugMode, this.vileMode);
+        setInterval(function() {
+            updateCache(this.debugMode, this.vileMode);
+        }, 300000); // Every 5 minutes, update cache
+    }
+
+    // Live Functions
+
+    // Options is a JSON Object
+    // key: debugMode value: boolean,
+    // key: vilemode value: boolean
+    async updateCache(options) {
+        let songs = [];
+        try {
+            let request = await axios.get(this.repoUrl);
+            for(let item of request?.data) {
+                let itemname = item.name.toLowerCase().replaceAll(' ', '_');
+                if(itemname.startsWith('vile_')) {
+                    if(options.vileMode) {
+                        songs.push({
+                            "name": itemname,
+                            "url": item.html_url + '?raw=true'
+                        });
+                    };
+                } else {
+                    songs.push({
+                        "name": itemname,
+                        "url": item.html_url + '?raw=true'
+                    });
+                };
+            };
+        } catch(error) {
+            if(debugMode) console.log(`${chalk.red('FATAL COOMWAY/LOCUST ERROR: ')}\n${error}`);
         };
-    } catch(error) {
-        if(debugMode) console.log(`${chalk.red('FATAL COOMWAY ERROR: ')}\n${error}`);
+        cache = songs;
     };
-    cache = songs;
-};
 
-// Cache Functions
-
-function pullCachedSongs() {
-    return cache;
-};
-
-async function randomSong() {
-    return cache.sort((a, b) => Math.random() - 0.5)[0];
-};
-
-async function search(query) {
-    query = await query.toLowerCase().replaceAll(' ', '').replaceAll('_', ''); // Sanitize to match songs return
-    let choices = [];
-    for(let item of cache) {
-        if(item.name.replaceAll('_', '').includes(query)) choices.push(item);
+    // Cache Functions
+    pullCachedSongs() {
+        return cache;
     };
-    return choices;
+
+    async randomSong() {
+        return cache.sort((a, b) => Math.random() - 0.5)[0];
+    };
+
+    async search(query) {
+        query = await query.toLowerCase().replaceAll(' ', '').replaceAll('_', ''); // Sanitize to match songs return
+        let choices = [];
+        for(let item of cache) {
+            if(item.name.replaceAll('_', '').includes(query)) choices.push(item);
+        };
+        return choices;
+    };
 };
 
-module.exports = {
-    updateCache: updateCache,
-    pullCachedSongs: pullCachedSongs,
-    randomSong: randomSong,
-    search: search
-};
+module.exports = CoomClient
