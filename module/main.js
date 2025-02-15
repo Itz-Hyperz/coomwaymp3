@@ -13,14 +13,14 @@ class CoomClient {
     // Options is a JSON Object
     // key: debugMode value: boolean,
     // key: vilemode value: boolean
-    async updateCache() {
+    async updateCache(options) {
         let songs = [];
         try {
-            let request = await axios.get(this.repoUrl);
+            let request = await axios.get(options.repoUrl);
             for(let item of request?.data) {
                 let itemname = item.name.toLowerCase().replaceAll(' ', '_');
                 if(itemname.startsWith('vile_')) {
-                    if(this.vileMode) {
+                    if(options.vileMode) {
                         songs.push({
                             "name": itemname,
                             "url": item.html_url + '?raw=true'
@@ -34,7 +34,7 @@ class CoomClient {
                 };
             };
         } catch(error) {
-            if(this.debugMode) console.log(`${chalk.red('FATAL COOMWAY/LOCUST ERROR: ')}\n${error}`);
+            if(options.debugMode) console.log(`${chalk.red('FATAL COOMWAY/LOCUST ERROR: ')}\n${error}`);
         };
         cache = songs;
     };
