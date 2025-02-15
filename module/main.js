@@ -87,7 +87,7 @@ class CoomClient {
                 if(this.debugMode) console.log(`${chalk.red('FATAL COOMWAY/LOCUST ERROR: ')}\n${error}`);
             };
             cache = songs;
-        }, 10000); // Every 5 minutes, update cache 300000
+        }, 300000); // Every 5 minutes, update cache 300000
     }
 
     // Cache Functions
