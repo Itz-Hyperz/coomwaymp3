@@ -14,7 +14,7 @@ class CoomClient {
     async pullManualCache(options) {
         let songs = [];
         try {
-            let request = await axios.get(options.repoUrl);
+            let request = await axios.get(options.repoUrl || this.repoUrl);
             for(let item of request?.data) {
                 let itemname = item.name.toLowerCase().replaceAll(' ', '_');
                 if(itemname.startsWith('vile_')) {
