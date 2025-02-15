@@ -1,0 +1,46 @@
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CoomwayMP3 - VILE</title>
+        <meta property="og:title" content="CoomwayMP3 - VILE" />
+        <link rel="icon" href="/assets/ash.jpg">
+        <meta property="og:image" content="/assets/ash.jpg">
+        <meta name="theme-color" content="#9900ff">
+        <meta name="description" content="The website and main landing page for the CoomwayMP3 node module!" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="The website and main landing page for the CoomwayMP3 node module!" />
+    </head>
+    <body>
+        <%- include('_header') %>
+        <div class="container maincontainer bg-secondary2 p-4 mb-5">
+            <h1 class="mb-3">Archived VILE <span style="color: white !important"><i class="fa-brands fa-github"></i> Github</span> Music</h1>
+            <hr>
+            <h2 class="mb-3">This is strictly the VILE songs!</h2>
+            <form class="mb-3" action="/backend/searchsong" method="post">
+                <div class="row w-75 justify-content-center mx-auto">
+                    <div class="col-lg-6">
+                        <input class="form-control mt-3 me-2 w-100" name="query" type="search" placeholder="Search song..." aria-label="Search" required>
+                    </div>
+                    <div class="col-lg-6">
+                        <button class="btn btn-warning mt-3 w-100" type="submit">Search Song</button>
+                    </div>
+                </div>
+            </form>
+            <div class="row justify-content-center">
+                <% songs.sort((a, b) => { return a.name.localeCompare(b.name); }).forEach(function(item) { if(item.name.startsWith('vile_')) { %>
+                    <div class="col-lg-3 mb-3">
+                        <div class="p-3">
+                            <h5 class="mainthemecolorthing"><%= item.name %></h5>
+                            <audio class="audiomain" controls>
+                                <source src="<%= item.url %>" type="audio/<%= item.name.split('.').reverse()[0] %>">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                <% }}); %>
+            </div>
+        </div>
+        <%- include('_footer') %>
+    </body>
+</html>

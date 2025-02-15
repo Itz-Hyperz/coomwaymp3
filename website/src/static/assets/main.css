@@ -7,6 +7,7 @@ body {
     background-size: cover !important;
     background-position: center center !important;
     background-color: #1a1a1a;
+    background-image: url('https://coomway.loganswebservices.com/assets/newbgpattern2.png') !important;
     width: 100%;
     height:100%;
     margin: auto;
@@ -16,6 +17,63 @@ body {
     font-size: 1rem;
     text-align: center;
     word-wrap: break-word;
+}
+
+.mainthemecolorthing {
+    color: rgb(153, 0, 255) !important;
+    font-weight: 600;
+}
+
+.btn-warning {
+    color: rgb(255, 255, 255) !important;
+    border-color: rgb(153, 0, 255) !important;
+    background-color: rgb(153, 0, 255);
+    transition: background-color 200ms ease, color 200ms ease;
+}
+
+.btn-warning:focus, .btn-warning:hover {
+    color: rgb(255, 255, 255) !important;
+    border-color: rgb(153, 0, 255) !important;
+    background-color: rgba(153, 0, 255, 0);
+}
+
+.piciconhome a:hover, .piciconhome a:focus {
+    color: white !important;
+}
+
+.btn-success {
+    color: rgb(255, 255, 255) !important;
+    border-color: rgb(30, 214, 97) !important;
+    background-color: rgb(30, 214, 97);
+    transition: background-color 200ms ease, color 200ms ease;
+}
+
+.btn-success:focus, .btn-success:hover {
+    color: rgb(255, 255, 255) !important;
+    border-color: rgb(30, 214, 97) !important;
+    background-color: rgba(153, 0, 255, 0);
+}
+
+.bg-secondary2{
+    background-color: rgba(0, 0, 0, 0.486) !important;
+}
+
+.piciconhome {
+    font-size: 2.4em;
+    padding: 0.4em;
+    border-radius: 0.4em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 2em;
+    margin-bottom: 0.2em;
+}
+
+.statdata h2 {
+    font-weight: 700;
+}
+
+.statdata p {
+    margin-bottom: 1em;
 }
 
 #footer {
@@ -41,7 +99,7 @@ body {
 }
 
 h1 {
-    color:rgb(255, 196, 0);
+    color:rgb(153, 0, 255);
     font-weight: 700;
 }
 
@@ -68,7 +126,7 @@ a:hover {
 }
 
 .navbar-brand {
-    color: rgb(255, 196, 0) !important;
+    color: rgb(153, 0, 255) !important;
     font-weight: 700;
 }
 
@@ -78,7 +136,7 @@ a:hover {
 }
 
 .nav-link:hover {
-    color: rgb(255, 196, 0) !important;
+    color: rgb(153, 0, 255) !important;
 }
 
 .navbar-toggler {
@@ -91,7 +149,7 @@ a:hover {
 }
 
 .footeratag {
-    color:rgb(255, 196, 0) !important;
+    color:rgb(153, 0, 255) !important;
     transition: color 200ms ease-in-out;
 }
 
@@ -154,4 +212,7 @@ a:hover {
 
 @media only screen and (max-width: 540px) {
     /* For mobile view */
+    .maintitlemobilechange {
+        font-size: 1.5em;
+    }
 }

@@ -3,7 +3,8 @@ const config = require("./config.json");
 const express = require("express");
 const app = express();
 const chalk = require('chalk');
-const coomwaymp3 = require('coomwaymp3');
+const coomwaymp3 = new (require('coomwaymp3'))({ debugMode: true, vileMode: false });
+coomwaymp3.init();
 
 // Backend Initialization
 const backend = require('./backend.js');
@@ -13,6 +14,11 @@ backend.init(app);
 app.get('', async function(req, res) {
     let songs = coomwaymp3.pullCachedSongs(true);
     res.render('index.ejs', { songs: songs });
+});
+
+app.get('/vile', async function(req, res) {
+    let songs = await coomwaymp3.pullManualCache({ debugMode: true, vileMode: true });
+    res.render('vile.ejs', { songs: songs });
 });
 
 app.get('/random', async function(req, res) {
