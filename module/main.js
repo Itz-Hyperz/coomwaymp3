@@ -34,7 +34,7 @@ class CoomClient {
                 };
             };
         } catch(error) {
-            if(debugMode) console.log(`${chalk.red('FATAL COOMWAY/LOCUST ERROR: ')}\n${error}`);
+            if(this.debugMode) console.log(`${chalk.red('FATAL COOMWAY/LOCUST ERROR: ')}\n${error}`);
         };
         cache = songs;
     };
@@ -60,10 +60,10 @@ class CoomClient {
                 };
             };
         } catch(error) {
-            if(debugMode) console.log(`${chalk.red('FATAL COOMWAY/LOCUST ERROR: ')}\n${error}`);
+            if(this.debugMode) console.log(`${chalk.red('FATAL COOMWAY/LOCUST ERROR: ')}\n${error}`);
         };
         cache = songs;
-        setInterval(async function() {
+        setInterval(async () => {
             let songs = [];
             try {
                 let request = await axios.get(this.repoUrl);
@@ -84,7 +84,7 @@ class CoomClient {
                     };
                 };
             } catch(error) {
-                if(debugMode) console.log(`${chalk.red('FATAL COOMWAY/LOCUST ERROR: ')}\n${error}`);
+                if(this.debugMode) console.log(`${chalk.red('FATAL COOMWAY/LOCUST ERROR: ')}\n${error}`);
             };
             cache = songs;
         }, 10000); // Every 5 minutes, update cache 300000
