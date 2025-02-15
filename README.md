@@ -20,7 +20,8 @@ An NPM module / website designed to return mp3 files / songs created by MasterCo
 ## Code Example
 
 ```js
-const coomwaymp3 = require('coomwaymp3')
+const coomwaymp3 = new (require('coomwaymp3'))({ debugMode: true, vileMode: false }); // Keep vileMode disabled
+coomwaymp3.init();
 const Discord = require('discord.js')
 const client = new Discord.Client()
 
