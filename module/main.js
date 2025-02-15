@@ -10,10 +10,8 @@ class CoomClient {
         this.repoUrl = options.repoUrl || "https://api.github.com/repos/itz-hyperz/coomwaymp3/contents/assets"; // by default dont change this.
     }
 
-    // Options is a JSON Object
-    // key: debugMode value: boolean,
-    // key: vilemode value: boolean
-    async updateCache(options) {
+    // IT IS NOT RECOMMENDED TO USE THIS!!! YOU WILL GET RATE LIMITED!!!
+    async pullManualCache(options) {
         let songs = [];
         try {
             let request = await axios.get(options.repoUrl);
@@ -33,10 +31,10 @@ class CoomClient {
                     });
                 };
             };
+            return songs;
         } catch(error) {
             if(options.debugMode) console.log(`${chalk.red('FATAL COOMWAY/LOCUST ERROR: ')}\n${error}`);
         };
-        cache = songs;
     };
 
     async init() { // Run this function to begin.
