@@ -3,7 +3,7 @@ const config = require("./config.json");
 const express = require("express");
 const app = express();
 const chalk = require('chalk');
-const coomwaymp3 = new (require('coomwaymp3'))({ debugMode: true, vileMode: false });
+const coomwaymp3 = new (require('coomwaymp3'))({ debugMode: true, vileMode: true });
 coomwaymp3.init();
 
 // Backend Initialization
@@ -12,13 +12,13 @@ backend.init(app);
 
 // Routing
 app.get('', async function(req, res) {
-    let songs = coomwaymp3.pullCachedSongs(true);
-    res.render('index.ejs', { songs: songs });
+    let songsSorted = await sortSongs(await coomwaymp3.pullCachedSongs());
+    res.render('index.ejs', { songs: songsSorted.clean });
 });
 
 app.get('/vile', async function(req, res) {
-    let songs = await coomwaymp3.pullManualCache({ debugMode: true, vileMode: true });
-    res.render('vile.ejs', { songs: songs });
+    let songsSorted = await sortSongs(await coomwaymp3.pullCachedSongs());
+    res.render('vile.ejs', { songs: songsSorted.vile });
 });
 
 app.get('/random', async function(req, res) {
@@ -46,3 +46,16 @@ console.log(chalk.blue('CoomwayMP3-Website Started on Port ' + config.port));
 process.on('unhandledRejection', (err) => { 
     if(config.debugMode) console.log(chalk.red(err));
 });
+
+async function sortSongs(data) {
+    let clean = [];
+    let vile = [];
+    await data.forEach(function(item) {
+        if(item.name.startsWith('vile_')) {
+            vile.push(item);
+        } else {
+            clean.push(item);
+        };
+    });
+    return({clean: clean, vile: vile});
+};
