@@ -17,18 +17,14 @@
             <h1 class="mb-3">Archived VILE <span style="color: white !important"><i class="fa-brands fa-github"></i> Github</span> Music</h1>
             <hr>
             <h2 class="mb-3">This is strictly the VILE songs!</h2>
-            <form class="mb-3" action="/backend/searchsong" method="post">
-                <div class="row w-75 justify-content-center mx-auto">
-                    <div class="col-lg-6">
-                        <input class="form-control mt-3 me-2 w-100" name="query" type="search" placeholder="Search song..." aria-label="Search" required>
-                    </div>
-                    <div class="col-lg-6">
-                        <button class="btn btn-warning mt-3 w-100" type="submit">Search Song</button>
-                    </div>
+            <div class="row w-75 justify-content-center mx-auto">
+                <div class="col-lg-6">
+                    <input class="form-control mt-3 me-2 w-100" type="text" placeholder="Enter Password..." onkeyup="check_password (this);" required>
                 </div>
-            </form>
-            <div class="row justify-content-center">
-                <% songs.sort((a, b) => { return a.name.localeCompare(b.name); }).forEach(function(item) { if(item.name.startsWith('vile_')) { %>
+            </div>
+            
+            <div id="hidden_div" style="display: none;" class="row justify-content-center">
+                <% songs?.sort((a, b) => { return a.name.localeCompare(b.name); }).forEach(function(item) { %>
                     <div class="col-lg-3 mb-3">
                         <div class="p-3">
                             <h5 class="mainthemecolorthing"><%= item.name %></h5>
@@ -38,9 +34,21 @@
                             </audio>
                         </div>
                     </div>
-                <% }}); %>
+                <% }); %>
             </div>
         </div>
         <%- include('_footer') %>
+        <script>
+            function check_password (input_element) {
+                //get value of input
+                var password = input_element.value;
+                //check value and show/hide the div
+                if (password == 'ColeIsSuckingAshtonsDickRightNow') {
+                    document.getElementById ('hidden_div').style.display = 'flex';
+                } else {
+                    document.getElementById ('hidden_div').style.display = 'none';
+                };
+            };
+        </script>
     </body>
 </html>
